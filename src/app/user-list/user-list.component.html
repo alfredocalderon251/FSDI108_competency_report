@@ -1,0 +1,32 @@
+
+<h3>List of Users</h3>
+
+
+<ul>
+    <li *ngFor="let user of userList">{{user.userName}} {{user.firstName}} {{user.lastName}}</li>
+</ul>
+
+<table class="table table-bordered table-stripped">
+<thead>
+    <tr>
+        <th>User Name</th>
+        <th>First Name</th>
+        <th>Last name</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </tr>
+</thead>
+
+<tbody>
+    <tr *ngFor="let user of userList">
+        <td>{{user.userName}}</td>
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.phone}}</td>
+    </tr>
+</tbody>
+
+
+</table>
+

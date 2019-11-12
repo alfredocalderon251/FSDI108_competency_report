@@ -1,0 +1,31 @@
+
+
+<div class="container">
+    <div class="jumbotron">
+            <h3>User Login</h3>
+            <div *ngIf="loginFailed" class="alert alert-danger" role="alert">
+                    Login data is not correct, try again
+                  </div>
+
+            <div class="form-group">
+                <label for="txt_username">UserName</label>
+                <input [(ngModel)]="userName" (ngModelChange)="uservaluechanged()" type="text" class="form-control" id="txt_username" name="userName" aria-describedby="userHelp" placeholder="Enter UserName">
+                 
+                <div *ngIf="userNameError" class="alert alert-danger" role="alert">
+                        UserName is required to be at least 3 chars long
+                      </div>
+              </div>
+            
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input [(ngModel)]="password" (ngModelChange)="passwordvaluechanged()" type="password"  class="form-control" id="txt_pass" name="password" placeholder="Password">
+                  
+                <div *ngIf="passwordError" class="alert alert-danger" role="alert">
+                        Password is required to be at least 6 chars long
+                      </div>
+              </div>
+            
+              <button type="button" (click)="login()" class="btn btn-primary">Login</button>
+    </div>
+        
+</div>
